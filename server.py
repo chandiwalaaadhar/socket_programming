@@ -29,7 +29,7 @@ def handle_client(conn, addr):
         if msg_len:
             msg_len=int(msg_len)
             msg=conn.recv(msg_len).decode(FORMAT)
-            if msg=='DISCONNECT_MESSAGE':
+            if msg==DISCONNECT_MESSAGE:
                 connected=False
             print(f"[{addr}] {msg}")
             conn.send("Message is Received".encode(FORMAT))
