@@ -33,6 +33,9 @@ def handle_client(conn, addr):
                 connected=False
             print(f"[{addr}] {msg}")
             conn.send("Message is Received".encode(FORMAT))
+        else:
+            connected=False
+            
     conn.close()
 
 print("SERVER IS STARTING......")
